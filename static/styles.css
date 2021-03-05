@@ -20,6 +20,11 @@
     color: #6699ff;
 }
 
+#orgs-navbarbrand
+{
+    color: #6699ff;
+}
+
 #index-nav-link:hover, #index-btn-lang
 {
     background-color: #6699ff;
@@ -34,6 +39,12 @@
 {
     background-color: #6699ff;
 }
+
+#orgs-nav-link:hover, #about-btn-lang
+{
+    background-color: #6699ff;
+}
+
 
 .title-color
 {
@@ -57,17 +68,16 @@
     background-color: #6699ff;
 }
 
+#orgs-title
+{
+    background-color: #6699ff;
+}
+
 .container
 {
     min-height:100%;
     min-width:100%;
 }
-
-/* This is for debugging purposes to see the size of divs
-*{
- outline: 1px solid red;
-} */
-
 
 .title-color
 {
@@ -187,6 +197,15 @@
     border: 2px solid rgba(0,0,0,0.5);
     padding: 5px 5px 5px 5px;
 }
+
+.orgs-img
+{
+    width: 100%;
+    height: auto;
+    border: 2px solid rgba(0,0,0,0.5);
+    padding: 5px 5px 5px 5px;
+}
+
 
 .portfolio-img:hover
 {

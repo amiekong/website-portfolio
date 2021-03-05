@@ -20,13 +20,23 @@ def about():
     title_text = 'I took the Dental Admission Test, received a decent score, and with that I applied to a masters program in Computer Science...'
     return render_template('/about.html',
                             title_text=title_text,
-                            title="ABOUT ME",
+                            title="About Me",
                             id="about")
+
 
 @app.route('/portfolio', methods=['POST', 'GET'])
 def portfolio():
     title_text = 'Python (scikit-learn, NumPy, SciPy, Pandas, Keras, Gensim, Plotly), Java, SQL, HTML, CSS, Git, Unix, Flask, Data Extraction, Data Cleaning & Data Visualization'
     return render_template('/portfolio.html',
                             title_text=title_text,
-                            title="PROJECT PORTFOLIO",
+                            title="Project Portfolio",
                             id="portfolio")
+
+
+@app.route('/orgs', methods=['POST', 'GET'])
+def org():
+    title_text = 'Promoting Diversity, Inclusion, Community, Leadership'
+    return render_template('/orgs.html',
+                            title_text=title_text,
+                            title="Organizations",
+                            id="orgs")
