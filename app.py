@@ -11,7 +11,7 @@ def index():
     title_text = 'Hi I’m Amie. I enjoy programming, creating, teaching, and promoting inclusion.'
     return render_template('index.html',
                                 title_text=title_text,
-                                title="Data Science for Everyone",
+                                title="Data Science for Humanity",
                                 id="index")
 
 
