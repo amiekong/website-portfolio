@@ -6,76 +6,102 @@
 
 {% block main %}
 
-    <section class="home-content">
-        <div class="container p-0">
-
-            {% for two_projects in projects %}
-            <div class="row portfolio-row justify-content-center">
-                {% if two_projects[1][0] == "placeholder" %}
-                <div class="col-12 col-md-5">
-                    <div class="text-center">
-                        <a class="title-link" target="_blank" href="{{ two_projects[0][4][0][1] }}"><h5>{{ two_projects[0][0] }}</h5></a>
-                        <p class="project-des">
-                            {{ two_projects[0][1] }}
-                        </p>
-                        <p class="skills">
-                            <span class="bold">Skills:</span> {{ two_projects[0][2] }}
-                        </p>
-                    </div>
-                    <div class="row">
-                        <a target="_blank" href="{{ two_projects[0][4][0][1] }}">
-                            <img class="portfolio-img" src="/static/img/{{ two_projects[0][3]}}.png">
-                        </a>
-                    </div>
-                    <div class="row">
-                        {% for button in two_projects[0][4] %}
-                        {% if two_projects[0][4]|length == 2 %}
-                        <div class="col-6 text-center">
-                            <a target="_blank" href="{{ button[1] }}" class="button btn portfolio-btn rounded-0">{{ button[0] }}</a>
-                        </div>
-                        {% else %}
-                        <div class="col-12 text-center">
-                            <a target="_blank" href="{{ button[1] }}" class="button btn portfolio-btn rounded-0">{{ button[0] }}</a>
-                        </div>
-                        {% endif %}
-                        {% endfor %}
-                    </div>
-                </div>
-                {% else %}
-                    {% for project in two_projects %}
-                        <div class="col-12 col-md-5">
-                            <div class="text-center">
-                                <a target="_blank" class="title-link" href="{{ project[4][0][1] }}"><h5>{{ project[0] }}</h5></a>
-                                <p class="project-des">
-                                    {{ project[1] }}
-                                </p>
-                                <p class="skills">
-                                    <span class="bold">Skills:</span> {{ project[2] }}
-                                </p>
-                            </div>
-                            <div class="row">
-                                <a target="_blank" href="{{ project[4][0][1] }}">
-                                    <img class="portfolio-img" src="/static/img/{{ project[3] }}.png">
-                                </a>
-                            </div>
-                            <div class="row">
-                                {% for button in project[4] %}
-                                {% if project[4]|length == 2 %}
-                                <div class="col-6 text-center">
-                                    <a target="_blank" href="{{ button[1] }}" class="button btn portfolio-btn rounded-0">{{ button[0] }}</a>
-                                </div>
-                                {% else %}
-                                <div class="col-12 text-center">
-                                    <a target="_blank" href="{{ button[1] }}" class="button btn portfolio-btn rounded-0">{{ button[0] }}</a>
-                                </div>
-                                {% endif %}
-                                {% endfor %}
-                            </div>
-                        </div>
-                    {% endfor %}
-                {% endif %}
+<section class="home-content">
+    <div class="row portfolio-row justify-content-center">
+        <div class="col-md-5">
+            <div class="text-center">
+                    <h2 class="about-header"><i>Natural Language Processing To Analyze Abuse and Domestic Violence Subreddits During COVID-19</i></h2>
+                    <a target="_blank" class="nlp-project-link" href="https://github.com/amiekong/nlp-reddit-analysis"><font size="-4">github repo to project</font></a>
             </div>
-            {% endfor %}
-    </section>
+            <div class="row justify-content-center">
+                <div class="row index-img text-center">
+                      <img src="/static/img/violence.png" width = "600" height = auto>
+                      <div class="text-center">
+                        <div class="row portfolio-row justify-content-center">
+                              <h3 class="about-header"><i>Effect of COVID-19 on Mental Health</i></h3>
+                              </div>
+                      </div>
+                      <p><i>
+                        “According to experts, the pandemic is a “perfect storm” for domestic violence. The NEJM argues that economic hardship, increased stress, and new barriers to reporting violence all point to a surge in future reports.”
+</i>
+                         </p>
+<p><i>
+  “The Centers for Disease Control and Prevention says in its guidelines that social distancing measures might increase the risk for abuse, including child abuse and neglect, intimate partner violence, and elder abuse.”
+</i>
+                         </p>
+                      <div class="text-center">
+                        <div class="row portfolio-row justify-content-center">
+                              <h3 class="about-header"><i>Approach</i></h3>
+                                <img src="/static/img/approach.png" width = "600" height = auto>
+                              </div>
+                      </div>
+                      <p>
+                        English stop words were removed from posts and
+                        preprocessing depended on the analysis. <b>VADER
+                        Sentiment Analysis </b> and <b>Linguistic Inquiry and Word
+                        Count </b> (LIWC) were features extracted from the
+                        body text of each post using an installed VADER Sentiment package and a LIWC software. For
+                        extracting the polarity scores for VADER sentiment
+                        analysis, the original text was used because uppercased text has significance. From those feature
+                        extraction methods, detection of patterns or trends
+                        in the subreddit will be useful in highlighting any
+                        drastic changes during the pandemic. The subreddit datasets with posts in the prepandemic time
+                        frame act as the baseline for this project. Creating a topic model using <b>Latent Dirichlet Allocation </b>
+                        (LDA) will uncover any noticeable topics that arose
+                        from the mid-pandemic in the subreddit, whether it
+                        be a new topic or a decline or increase in the term
+                        frequency of a topic or word.
+                         </p>
+                      <div class="text-center">
+                        <div class="row portfolio-row justify-content-center">
+                              <h3 class="about-header"><i>Data Downloading & Preprocessing</i></h3>
+                              <img src="/static/img/data_slide.png" width = "600" height = auto>
+                              <img src="/static/img/data_slide2.png" width = "600" height = auto>
+                              </div>
+                      </div>
+                      <div class="text-center">
+                        <div class="row portfolio-row justify-content-center">
+                              <h3 class="about-header"><i>Findings</i></h3>
+                              </div>
+                      </div>
+                      <p>
+                        From the LIWC analysis, the top psychological processes that comprise abuse and domestic violence
+                        reddit word text are similar, with social processes,
+                        cognitive processes, and relativity being the top 3
+                        categories. No significant change existed in the
+                        frequency of words that fall under the 9 psychological processes in the abuse, domestic violence, and
+                        PTSD subreddit posts.
+                        </p>
 
+                        <img src="/static/img/abuse_vader.png" width = "650" height = auto>
+                        <img src="/static/img/violence_vader.png" width = "650" height = auto>
+
+<p>
+<br>
+                        The sentiment analysis generalized a <b>higher percentage rate
+of negative posts</b> in abuse and domestic violence
+subreddits during the pandemic.
+                        </p>
+                        <p>
+                        A probabilistic modeling approach of topic modeling, Latent Dirichlet Allocation, was performed on each data set to detect the top underlying topics and if there exists any noticeable changes for each subreddit prepandemic vs midpandemic.
+                        </p> <p>
+                        LDA was used to detect any topic changes in the extracted pre-pandemic subreddit submissions vs the mid-pandemic subreddit submissions. Using the LDA Mallet Model imported by gensim, a manually chosen LDA model with 10 topics was then applied to the r/abuse, r/domesticViolence, r/ptsd subreddits to assess the distribution of topics, allowing for comparison between the distribution of subreddit submissions pre-pandemic vs mid-pandemic. Interactive pyLDAvis visualization maps for each subreddit can be viewed <a target="_blank" class="portfolio-link" href="https://reddit-topic-model.herokuapp.com/">here.</a>
+
+
+
+                        </p> <p>
+                        There were
+no noticeable changes or trends in the intertopic
+distance maps for the subreddits before and during the
+pandemic. Still, better understanding the thoughts of victims of
+abuse and domestic violence allows social workers
+to assist the victims by having knowledge of sensitive topics that the victims are concerned about.
+
+                         </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </section>
 {% endblock %}
