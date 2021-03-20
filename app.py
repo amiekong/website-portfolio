@@ -2,16 +2,16 @@ from flask import Blueprint, Flask, g, jsonify, render_template, request, Respon
 from werkzeug.exceptions import default_exceptions, HTTPException, InternalServerError
 import os
 
-# Configure application
+
 app = Flask(__name__)
 
 @app.route('/index', methods=['POST', 'GET'])
 @app.route('/', methods=['POST', 'GET'])
 def index():
-    title_text = 'Hi I’m Amie. I enjoy programming, creating, teaching, and giving back.'
+    title_text = 'Hi I’m Amie. I enjoy programming, creating, teaching, and promoting inclusion.'
     return render_template('index.html',
                                 title_text=title_text,
-                                title="Data Science for Community",
+                                title="Data Science for Everyone",
                                 id="index")
 
 
@@ -26,7 +26,7 @@ def about():
 
 @app.route('/portfolio', methods=['POST', 'GET'])
 def portfolio():
-    title_text = 'Python (scikit-learn, NumPy, SciPy, Pandas, Keras, Gensim, Plotly), Java, SQL, HTML, CSS, Git, Unix, Flask, Data Extraction, Data Cleaning & Data Visualization'
+    title_text = 'Python (scikit-learn, NumPy, SciPy, Pandas, Keras, Gensim, Plotly), Java, SQL, Solr, HTML, CSS, Git, Unix, Flask, Data Extraction, Data Cleaning & Data Visualization'
     return render_template('/portfolio.html',
                             title_text=title_text,
                             title="Project Portfolio",
